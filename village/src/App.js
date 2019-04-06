@@ -30,6 +30,13 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  deleteSmurf = id => {
+    console.log("Inside DELETE", id);
+    axios.delete(`http://localhost:3333/smurfs/${id}`)
+      .then(res => this.setState({smurfs: res.data}))
+      .catch(err => console.log(err))
+  }
+
   render() {
     console.log("server", this.state);
     return (
@@ -37,7 +44,7 @@ class App extends Component {
         <NavLink exact to="/" activeClassName="activeNavLink">Home</NavLink>
         <NavLink to="/smurf-form" activeClassName="activeNavLink">Add Smurfs</NavLink>
 
-        <Route exact path="/" render={props => <Smurfs {...props} smurfs={this.state.smurfs} />} />
+        <Route exact path="/" render={props => <Smurfs {...props} smurfs={this.state.smurfs} deleteSmurf={this.deleteSmurf}/>} />
         <Route path="/smurf-form" render={props => <SmurfForm {...props} postSmurf={this.postSmurf} />} />
       </div>
     );
