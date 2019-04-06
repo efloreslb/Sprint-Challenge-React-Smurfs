@@ -1,10 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
-.activeNavLink {
-  background-color: #88CCFF;
+a {
   color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-bar {
+  background-color: #001f3f;
+  color: #FFF;
+  width: 100%;
+  padding: 10px;
+}
+
+.activeNavLink {
+  background-color: #0074D9;
+  color: #001f3f;
+}
+
+.smurfs {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.smurf {
+  background-color: #0074D9;
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.smurf button {
+  width: 20px;
+  height: 100%;
+  background-color: #85144b;
+  color: #fff;
+  border: 0px;
+}
+
+.smurfForm {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.smurfForm input {
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.smurfForm button {
+  background-color: #0074D9;
+  border: 0px;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  font-size: 16px;
 }
